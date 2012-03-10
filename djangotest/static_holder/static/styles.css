@@ -1,0 +1,14 @@
+body
+{
+   background-color:#ffffff
+}
+
+
+div.chapter div.titlepage h2 
+{
+   float: center;
+   font-size: 180%;
+   font-family: Helvetica;
+   font-weight: Bold;
+   color: #77ff00
+}

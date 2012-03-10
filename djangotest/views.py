@@ -10,20 +10,23 @@ def index(request):
 
     return HttpResponse("Hello world")
 
+def current_time(request):
+
+    current_time = datetime.datetime.now()
+
+    return render_to_response("current_time.html",
+                              locals(),
+                              RequestContext(request))
+
 def get_time(request, time_diff):
 
     offset = int(time_diff)
     time_diff = datetime.datetime.now() + datetime.timedelta(hours=int(time_diff))
     
-    template = Template('''
-                        in {{ offset }} {{ hour_word }} the time will be
-                        {{time_diff }}
-                        ''')
-
     context = Context(
         {
-        'offset': offset,
-        'time_diff': time_diff
+            'offset': offset,
+            'time': time_diff
         }
     )
     
@@ -32,6 +35,6 @@ def get_time(request, time_diff):
     else:
         context['hour_word'] = 'hour'
 
-    return HttpResponse(template.render(context))
+    return render_to_response("future_time.html", context, RequestContext(request))
     
                       

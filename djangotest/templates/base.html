@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}styles.css">
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    {% block footer %}
+    <hr>
+    <p>(C) Aaron France 2012</p>
+    {% endblock %}
+  </body>
+</html>
