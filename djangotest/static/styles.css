@@ -1,14 +1,19 @@
 body
 {
-   background-color:#ffffff
+   background-color:#232323;
 }
 
-
-div.chapter div.titlepage h2 
+#div-1
 {
-   float: center;
-   font-size: 180%;
-   font-family: Helvetica;
-   font-weight: Bold;
-   color: #77ff00
+   color: #ffffff;   
+   margin-left: 10%;
+   margin-right: 10%;
+}
+
+#line
+{
+   
+   margin-left: 10%;
+   margin-right: 10%;
+   
 }

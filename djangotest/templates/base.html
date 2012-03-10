@@ -5,10 +5,25 @@
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}styles.css">
   </head>
   <body>
-    {% block content %}{% endblock %}
-    {% block footer %}
-    <hr>
-    <p>(C) Aaron France 2012</p>
+
+    <div id="div-1">
+      Title Block
+    </div>
+    <div id="line">
+      <hr>
+    </div>
+
+    {% block content %}
     {% endblock %}
-  </body>
+
+    {% block footer %}
+    <div id="line">
+      <hr>
+    </div>
+    <div id="div-1">
+      <p>Aaron France 2012</p>
+    </div>
+    {% endblock %}
+
+    </body>
 </html>
