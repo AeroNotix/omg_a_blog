@@ -1,4 +1,4 @@
-g# Django settings for djangotest project.
+# Django settings for djangotest project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
