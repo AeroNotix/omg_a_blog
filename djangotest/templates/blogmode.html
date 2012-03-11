@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content%}
+
+<div class="h2">
+  {{ blog.title }}
+</div>
+
+<div class="blog-text">
+
+  {% for entry in blog %}
+  <li><a href="{{ entry.blog_title }}">{{ entry.blog_title }}</a></li>
+  {% endfor %}
+
+</div>
+
+{% endblock %}

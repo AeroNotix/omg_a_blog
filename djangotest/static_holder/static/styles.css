@@ -6,15 +6,24 @@ body
    text-align: center;
 }
 
-#div-1
+.main-heading
 {
-   color: #EE7621;
-   text-align: center;
-   font-family: sans-serif;
+   text-align: left;
+   font-size: 120%;
+   margin-left: 18%;
 }
 
-#line
+.line
 {
-   margin-left: 10%;
-   margin-right: 10%;  
+   margin-left: 18%;
+   margin-right: 18%;  
+}
+
+.block 
+{
+
+   background-color: #303030;
+   text-align: justify;
+   margin-left: 20%;
+   margin-right: 20%;  
 }

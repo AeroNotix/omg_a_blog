@@ -15,10 +15,10 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_django_blog',
+        'USER': 'aero',
+        'PASSWORD': 'colgate',
         'HOST': '',
         'PORT': '',
     }
@@ -120,8 +120,10 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.admin',
     'gunicorn',
     'djangotest.static_holder',
+    'djangotest.blog',
 )
 
 # A sample logging configuration. The only tangible logging

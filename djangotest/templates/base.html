@@ -3,27 +3,27 @@
   <head>
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}styles.css">
-  </head>
+    </head>
   <body>
-
-    <div id="div-1">
-      Title Block
-    </div>
-    <div id="line">
+    
+  </br></br>
+    <div class="main-heading">
+        Sonerous Musings
+      </div>
+      
+      <div class="line">
       <hr>
     </div>
-
-    {% block content %}
-    {% endblock %}
-
-    {% block footer %}
-    <div id="line">
+    
+    <div class="block">
+      {% block content %}
+        {% endblock %}
+    </div>
+        {% block footer %}
+    <div class="line">
       <hr>
     </div>
-    <div id="div-1">
-      <p>Aaron France 2012</p>
-    </div>
-    {% endblock %}
-
-    </body>
+        <p>Aaron France 2012</p>
+        {% endblock %}
+ </body>
 </html>
