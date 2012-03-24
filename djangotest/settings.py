@@ -110,6 +110,7 @@ TEMPLATE_DIRS = (
     os.path.join(ROOT_DIR, 'templates/'),
 )
 
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -135,7 +136,7 @@ LOGGING = {
             'level': 'ERROR',
             'class': 'django.utils.log.AdminEmailHandler'
         }
-    },
+     },
     'loggers': {
         'django.request': {
             'handlers': ['mail_admins'],

@@ -1,6 +1,10 @@
 {% extends "base.html" %}
-
-{% block content %}
-{{ blog.blog_post }}
+{% block title %}
+{{ blog.blog_title }} 
 {% endblock %}
-
+{% block content %}
+<div id="blogentry">
+  <h5>{{ blog.blog_title }}</h5>
+  {{ blog.blog_post }}
+</div>
+{% endblock %}

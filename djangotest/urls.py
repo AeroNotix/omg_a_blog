@@ -7,7 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
                        url(r'^$', index),
                        url(r'^blog/$', bloglist),
-                       url(r'^youtube/$', youtube_link),
-                       url(r'^blog/(\w+)$', blog_entry),
+                       url(r'^blog/(?P<blogtitle>\w+)$', blog_entry),
+                       url(r'^about/$', blog_entry, {'blogtitle':"about"}),
                        url(r'^admin/', include(admin.site.urls)),
                        )

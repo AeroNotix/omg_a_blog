@@ -9,26 +9,28 @@
   <body>    
     <div id="content">
       <h3>
-        {% block heading %}
-        Aaron L. France
-        {% endblock %}
+         {% block heading %}
+          Aaron L. France
+          {% endblock %}
       </h3>
       <p>
+        {% block content %}
         This site is all about me and why I am awesome. It will contain things
         that I like and everything that is cool about everything that I do, it
         will also contain various ramblings and bullshit ideas that I come up
         with because I am awesome and you should listen to my awesome bullshit.
+        {% endblock %} 
       </p> 
-     </div>
-      <a href="http://github.com/AeroNotix">
-        <img style="position: absolute; top: 0; right: 0; border: 0;" 
-             src={{ githuburl }}
-             alt="Fork me on GitHub">
+    </div>
+    <a href="http://github.com/AeroNotix">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" 
+           src={{ githuburl }}
+        alt="Fork me on GitHub">
       </a>
-      <div id="footer">
-        <center>
-          <h>Aaron France 2012</h>
-        </center>
+      <div id="bottom-menu">
+        <a href="/">home</a>
+        <a href="/blog/">blog</a>
+        <a href="/about/">about</a>
       </div>
-  </body>
-</html>
+    </body>
+  </html>

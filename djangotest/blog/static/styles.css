@@ -5,11 +5,11 @@ body {
    font-family: 'Open Sans', sans-serif;
 }
 
-p {
+p { //paragraph
    text-align: justify;
 }
 
-h3 {
+h3 { //headings
    font-weight: normal;
    font-family: 'Times New Roman';
 }
@@ -26,7 +26,7 @@ h3 {
    border-bottom: 2px solid orange;
 }
 
-#navl {
+#nav-menu {
    background: black;
    width: 10%;
    border-radius: 5px;
@@ -49,7 +49,12 @@ h3 {
    min-height: 100%;
 }
 
-#footer {
+#blogentry {
+   font-size: 80%;
+   text-align: justify;
+}
+
+#bottom-menu {
    background: #1d1d1d;
    color: orange;
    position: fixed;
@@ -58,4 +63,18 @@ h3 {
    height: 3%;
    width: 100%;
    text-align: middle;
+   padding-left: 15%;
+   padding-top: 3px;
+}
+
+a:link {
+   color:orange;
+}
+
+a:visited {
+   color:orange;
+}
+
+a:hover {
+   background: brown;
 }

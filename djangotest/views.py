@@ -5,7 +5,6 @@ from django.views.decorators.csrf import csrf_protect
 from django.template import Template, Context
 from djangotest.blog.models import Blog
 from djangotest.blog.forms import ContactForm
-
 from django.http import Http404
 
 GITHUB = ''.join(["https://a248.e.akamai.net/assets.github.com/img/7afbc8b248",
@@ -17,20 +16,25 @@ import datetime
 import subprocess
 
 def index(request):
+
+    print request.path
+    
     return render_to_response("base.html",
                               {'githuburl': GITHUB},
                               RequestContext(request))
 
 
 def bloglist(request):
-    db = Blog.objects.all()
-    
+    db = Blog.objects.exclude(blog_title="about")
     return render_to_response("blogmode.html",
                               {'blog': db,
                                'githuburl': GITHUB},
                               RequestContext(request))
 
-def blog_entry(request, blogtitle):
+def blog_entry(request, blogtitle=None):
+
+    if not blogtitle:
+        raise Http404
     
     try:
         db = Blog.objects.get(blog_title=blogtitle)
@@ -41,15 +45,3 @@ def blog_entry(request, blogtitle):
                               {'blog': db,
                                'githuburl': GITHUB},
                               RequestContext(request))
-
-def youtube_link(request):
-
-    if request.POST.get("link", None):
-        subprocess.call(['firefox-aurora', request.POST['link']])
-        
-    return render_to_response("youtube.html",
-                              {'githuburl': GITHUB},
-                              RequestContext(request))
-
-
-
