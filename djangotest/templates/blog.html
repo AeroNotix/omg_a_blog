@@ -5,6 +5,6 @@
 {% block content %}
 <div id="blogentry">
   <h5>{{ blog.blog_title }}</h5>
-  {{ blog.blog_post }}
+  {{ blog.blog_post|safe }}
 </div>
 {% endblock %}
