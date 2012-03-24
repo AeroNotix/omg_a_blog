@@ -2,28 +2,33 @@
 <html>
   <head>
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}styles.css">
-    </head>
-  <body>
-    
-  </br></br>
-    <div class="main-heading">
-        Sonerous Musings
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}styles.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href="{{ STATIC_URL }}favicon.png"/>
+  </head>
+  <body>    
+    <div id="content">
+      <h3>
+        {% block heading %}
+        Aaron L. France
+        {% endblock %}
+      </h3>
+      <p>
+        This site is all about me and why I am awesome. It will contain things
+        that I like and everything that is cool about everything that I do, it
+        will also contain various ramblings and bullshit ideas that I come up
+        with because I am awesome and you should listen to my awesome bullshit.
+      </p> 
+     </div>
+      <a href="http://github.com/AeroNotix">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" 
+             src={{ githuburl }}
+             alt="Fork me on GitHub">
+      </a>
+      <div id="footer">
+        <center>
+          <h>Aaron France 2012</h>
+        </center>
       </div>
-      
-      <div class="line">
-      <hr>
-    </div>
-    
-    <div class="block">
-      {% block content %}
-        {% endblock %}
-    </div>
-        {% block footer %}
-    <div class="line">
-      <hr>
-    </div>
-        <p>Aaron France 2012</p>
-        {% endblock %}
- </body>
+  </body>
 </html>

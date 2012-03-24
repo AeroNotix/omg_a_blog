@@ -1,6 +1,5 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
-
 from djangotest.views import *
 
 admin.autodiscover()
@@ -8,6 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
                        url(r'^$', index),
                        url(r'^blog/$', bloglist),
-                       url(r'^blog/(.+)/$', blogentry),
+                       url(r'^youtube/$', youtube_link),
+                       url(r'^blog/(\w+)$', blog_entry),
                        url(r'^admin/', include(admin.site.urls)),
                        )

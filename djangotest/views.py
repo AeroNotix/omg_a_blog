@@ -4,32 +4,52 @@ from django.template import RequestContext
 from django.views.decorators.csrf import csrf_protect
 from django.template import Template, Context
 from djangotest.blog.models import Blog
+from djangotest.blog.forms import ContactForm
 
 from django.http import Http404
 
+GITHUB = ''.join(["https://a248.e.akamai.net/assets.github.com/img/7afbc8b248",
+                  "c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617",
+                  "a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726",
+                  "b6d655f72696768745f6461726b626c75655f3132313632312e706e67"])
+
 import datetime
+import subprocess
 
 def index(request):
+    return render_to_response("base.html",
+                              {'githuburl': GITHUB},
+                              RequestContext(request))
 
-    return HttpResponse("Hello world")
 
 def bloglist(request):
-
     db = Blog.objects.all()
     
     return render_to_response("blogmode.html",
-                              {'blog': db},
+                              {'blog': db,
+                               'githuburl': GITHUB},
                               RequestContext(request))
 
-def blogentry(request, blog_title):
-
+def blog_entry(request, blogtitle):
+    
     try:
-        db = Blog.objects.get(blog_title=blog_title)
+        db = Blog.objects.get(blog_title=blogtitle)
     except Blog.DoesNotExist:
         raise Http404
     
     return render_to_response("blog.html",
-                              {'blog': db},
+                              {'blog': db,
+                               'githuburl': GITHUB},
                               RequestContext(request))
-    
-                      
+
+def youtube_link(request):
+
+    if request.POST.get("link", None):
+        subprocess.call(['firefox-aurora', request.POST['link']])
+        
+    return render_to_response("youtube.html",
+                              {'githuburl': GITHUB},
+                              RequestContext(request))
+
+
+
