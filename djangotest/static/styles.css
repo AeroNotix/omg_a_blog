@@ -49,6 +49,11 @@ h3 { //headings
    min-height: 100%;
 }
 
+#blogentry {
+   font-size: 80%;
+   text-align: justify;
+}
+
 #bottom-menu {
    background: #1d1d1d;
    color: orange;
