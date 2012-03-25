@@ -41,7 +41,7 @@ def blog_entry(request, blogtitle=None):
         raise Http404
     
     try:
-        db = Blog.objects.get(blog_title=blogtitle)
+        db = Blog.objects.get(blog_url=blogtitle)
     except Blog.DoesNotExist:
         raise Http404
     
