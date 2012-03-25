@@ -26,6 +26,10 @@ def index(request):
 
 def bloglist(request):
     db = Blog.objects.exclude(blog_title="about")
+
+    if not len(db):
+        raise Http404
+    
     return render_to_response("blogmode.html",
                               {'blog': db,
                                'githuburl': GITHUB},
