@@ -5,10 +5,11 @@ ROOT_DIR = os.path.dirname(__file__)
 # Django settings for djangotest project.
 
 DEBUG = True
+
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    # ('Aaron France', 'aaron.l.france@gmail.com'),
 )
 
 MANAGERS = ADMINS
