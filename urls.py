@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
-from djangotest.views import *
+from omg_a_blog.views import *
 
 admin.autodiscover()
 
