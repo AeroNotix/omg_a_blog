@@ -1,7 +1,7 @@
 
 body {
-   background: #FFF8DC;
-   color: orange;
+   background: #336699;
+   color: silver;
    font-family: 'Open Sans', sans-serif;
 }
 
@@ -12,6 +12,7 @@ p { //paragraph
 h3 { //headings
    font-weight: normal;
    font-family: 'Times New Roman';
+   color: black;
 }
 
 #top-menu {
@@ -47,6 +48,8 @@ h3 { //headings
    margin: auto;
    font: 1.5em arial, verdana, sans-serif;
    min-height: 100%;
+   border-right: solid 2px #1d1d1d;
+   border-left: solid 2px #1d1d1d;
 }
 
 #blogentry {
@@ -68,11 +71,11 @@ h3 { //headings
 }
 
 a:link {
-   color:orange;
+   color:#336699;
 }
 
 a:visited {
-   color:orange;
+   color:#336699;
 }
 
 a:hover {
