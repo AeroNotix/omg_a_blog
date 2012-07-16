@@ -7,12 +7,10 @@ from omg_a_blog.blog.models import Blog
 from omg_a_blog.blog.forms import ContactForm
 from django.http import Http404
 
-GITHUB = ''.join(["https://a248.e.akamai.net/assets.github.com/img/7afbc8b248",
-                  "c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617",
-                  "a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726",
-                  "b6d655f72696768745f6461726b626c75655f3132313632312e706e67"])
+GITHUB = ''.join(["https://s3.amazonaws.com/github/ribbons/",
+                  "forkme_right_darkblue_121621.png"])
 
-
+                    
 def index(request):
 
     print request.path
