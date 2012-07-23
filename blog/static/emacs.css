@@ -1,5 +1,5 @@
 #inner { 
-   font-family: DejaVu Sans Mono;  
+   font-family: monospace;  
    font-weight: 500;  
    font-style: normal;  
    color: #bebebe;  
@@ -16,7 +16,7 @@
 }
 
 span.default   { 
-   font-family: DejaVu Sans Mono;  
+   font-family: monospace;  
    font-stretch: normal;  
    font-weight: 500;  
    font-style: normal;  
@@ -29,7 +29,7 @@ span.default   {
 span.default a { 
    padding-left: 1px;
    padding-right: 1px;
-   font-family: DejaVu Sans Mono;  
+   font-family: monospace;  
    font-stretch: inherit;  
    font-weight: 500;  font-style: normal;
    color: #bebebe;  
@@ -40,7 +40,7 @@ span.default a {
 
 span.string {
    color: #87cefa;
-   font-family: DejaVu Sans Mono;
+   font-family: monospace;
    font-stretch: inherit;
    font-weight: 500;
    font-style: normal;
@@ -51,7 +51,7 @@ span.string {
 
 span.string a { 
    color: #87cefa;  
-   font-family: DejaVu Sans Mono;
+   font-family: monospace;
    font-stretch: inherit;
    font-weight: 500;
    font-style: normal;
@@ -62,7 +62,7 @@ span.string a {
 span.type {
    color: #87ceeb;  
    font-weight: 700; 
-   font-family: DejaVu Sans Mono;
+   font-family: monospace;
    font-stretch: inherit; 
    font-style: normal;
    background: #262626;
@@ -73,7 +73,7 @@ span.type {
 span.type a { 
    color: #87ceeb;
    font-weight: 700;
-   font-family: DejaVu Sans Mono; 
+   font-family: monospace; 
    font-stretch: inherit;
    font-style: normal;
    background: #262626;
@@ -84,7 +84,7 @@ span.type a {
 span.keyword { 
    color: #afeeee; 
    font-weight: 700;  
-   font-family: DejaVu Sans Mono; 
+   font-family: monospace; 
    font-stretch: inherit;
    font-style: normal;
    background: #262626;
@@ -95,7 +95,7 @@ span.keyword {
 span.keyword a { 
    color: #afeeee;  
    font-weight: 700; 
-   font-family: DejaVu Sans Mono; 
+   font-family: monospace; 
    font-stretch: inherit; 
    font-style: normal; 
    background: #262626;
